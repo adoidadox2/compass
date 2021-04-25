@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import cityRouter from './cities.routes';
+import customerRouter from './customers.routes';
 
 const routes = Router();
 
@@ -14,5 +15,6 @@ routes.get('/', (request, response) =>
 );
 
 routes.use('/cities', cityRouter);
+routes.use('/customers', customerRouter);
 
 export default routes;

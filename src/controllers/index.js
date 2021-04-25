@@ -1,3 +1,4 @@
+import CustomerController from './CustomerController';
 import CityController from './CityController';
 
-export { CityController };
+export { CustomerController, CityController };
