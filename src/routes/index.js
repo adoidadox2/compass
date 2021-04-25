@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import cityRouter from './cities.routes';
 
 const routes = Router();
 
@@ -11,5 +12,7 @@ routes.get('/', (request, response) =>
     Status: 'Online',
   }),
 );
+
+routes.use('/cities', cityRouter);
 
 export default routes;
