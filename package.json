@@ -1,11 +1,13 @@
 {
   "name": "compass",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.js",
   "repository": "https://github.com/adoidadox2/compass.git",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "build": "sucrase ./src -d ./build --transforms imports",
+    "start": "yarn build && node build/server.js",
   },
   "dependencies": {
     "cors": "^2.8.5",

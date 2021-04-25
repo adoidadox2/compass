@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  compass-api:
+    container_name: compass-api
+    build: '.'
+    ports:
+      - '8000:8000'
+    environment:
+      SERVER_PORT: 8000
+      DB_URL: mongodb://mongo:27017/compass
+    depends_on:
+      - mongo
+    links:
+      - mongo
+  mongo:
+    image: mongo
+    container_name: mongo-compass
+    ports:
+      - '27017:27017'
+    restart: always
+    environment:
+      AUTH: 'no'
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
