@@ -2,7 +2,9 @@ import mongoose from 'mongoose';
 
 class DefaultDatabase {
   constructor() {
-    this.init();
+    if (process.env.NODE_ENV !== 'test') {
+      this.init();
+    }
   }
 
   init() {
