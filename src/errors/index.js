@@ -1,3 +1,1 @@
-import AppError from './AppError';
-
-export { AppError };
+export { default as AppError } from './AppError';
