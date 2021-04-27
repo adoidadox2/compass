@@ -19,7 +19,7 @@ Import the `Teste - Compasso.postman_collection.json` on Postman App.
 
 # How to start:
 
-
+**Warning**: The application will start on port **8000** and the mongo on port **27017**, check if these ports are available
 
 
 #### To start the project (Enter the project folder)
