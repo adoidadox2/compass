@@ -8,7 +8,7 @@
     "dev": "nodemon src/server.js",
     "build": "sucrase ./src -d ./build --transforms imports",
     "start": "yarn build && node build/server.js",
-    "test": "cross-env NODE_ENV=test jest --watch --runInBand"
+    "test": "cross-env NODE_ENV=test jest --watchAll --runInBand"
   },
   "dependencies": {
     "cors": "^2.8.5",
