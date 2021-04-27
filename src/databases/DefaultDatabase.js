@@ -1,5 +1,9 @@
 import mongoose from 'mongoose';
 
+const mongooseConfig = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+};
 class DefaultDatabase {
   constructor() {
     if (process.env.NODE_ENV !== 'test') {
@@ -9,10 +13,7 @@ class DefaultDatabase {
 
   init() {
     mongoose
-      .connect(`${process.env.DB_URL}`, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      })
+      .connect(`${process.env.DB_URL}`, mongooseConfig)
       .then(() => {
         console.log(
           `Connection successfully with MongoDB at ${process.env.DB_URL}`,

@@ -1,4 +1,2 @@
-import Customer from './Customer';
-import City from './City';
-
-export { Customer, City };
+export { default as Customer } from './Customer';
+export { default as City } from './City';

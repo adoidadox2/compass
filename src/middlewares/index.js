@@ -1,5 +1,3 @@
-import expressValidatorMiddleware from './expressValidatorMiddleware';
-import customerMiddleware from './customerMiddleware';
-import cityMiddleware from './cityMiddleware';
-
-export { expressValidatorMiddleware, customerMiddleware, cityMiddleware };
+export { default as expressValidatorMiddleware } from './expressValidatorMiddleware';
+export { default as customerMiddleware } from './customerMiddleware';
+export { default as cityMiddleware } from './cityMiddleware';

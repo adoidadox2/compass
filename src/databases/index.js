@@ -1,3 +1,1 @@
-import DefaultDatabase from './DefaultDatabase';
-
-export { DefaultDatabase };
+export { default as DefaultDatabase } from './DefaultDatabase';
