@@ -1,7 +1,7 @@
 import { City } from '../models';
 import { AppError } from '../errors';
 
-class CustomerController {
+class CityController {
   async index(request, response) {
     const { state, city } = request.query;
     const messages = {
@@ -85,4 +85,4 @@ class CustomerController {
   }
 }
 
-export default new CustomerController();
+export default new CityController();
